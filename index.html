@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Escolar</title>
+    <!-- Link do CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Fonte do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-meteor"></i>Agenda Escolar</h1>
+        <p>Um sistema de gerenciamento de compromissos escolares</p>
+    </header>
+    <main>
+        <div class="agendar_compromisso">
+            <div>
+                <p><i class="fa-solid fa-circle-plus"></i> Agendar Compromisso</p>
+            </div>
+            <div class="form-box">
+                <form id="form">
+                    <div>
+                        <label for="descricao">Descrição :</label>
+                        <input type="text" name="descricao" id="descricao" placeholder="ex: trabalho de artes, ..." required> 
+                    </div>
+                    <div>
+                        <label for="data">Data :</label>
+                        <input type="date" name="data" id="data" required>
+                    </div>
+                    <button type="submit">Agendar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Iframe do Google Calendar substituindo o calendário antigo -->
+        <div class="calendario-container">
+            <iframe src="https://calendar.google.com/calendar/embed?src=pt-br.brazilian%23holiday%40group.v.calendar.google.com&ctz=America%2FRecife" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <div class="compromissos_do_mes">
+            <h2>Compromissos do Mês</h2>
+            <div id="lista-compromissos"></div>
+        </div>
+    </main>
+    <footer>
+        <p>Agenda Escolar - Todos os direitos reservados. &copy; 2026</p>
+    </footer> 
+</body>
+</html>
